@@ -1,0 +1,101 @@
+<html xmlns:wicket="">
+<body>
+<wicket:extend>
+	<h2>5.6 Basic operations on components</h2>
+	<div class="section">
+		<h3>5.6.1 Changing the visibility</h3>
+
+		<p>This section shows several examples modifying the visibility of
+		components.</p>
+	
+		<div wicket:id="examples-5.6.1">
+		<table>
+			<tr>
+				<th>Example</th>
+				<th>Result</th>
+			</tr>
+			<tr>
+				<td><tt>label.setVisible(false);</tt></td>
+				<td><span wicket:id="label1"></span></td>
+			</tr>
+			<tr>
+				<td><tt>label.setVisible(!label.isVisible());</tt></td>
+				<td><span wicket:id="label2"></span></td>
+			</tr>
+			<tr>
+				<td><pre>new Label("label", "Now I'm visible!") {
+  @Override
+  public boolean isVisible() {
+    int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+    return day != Calendar.SATURDAY && day != Calendar.SUNDAY;
+  }
+}</pre></td>
+				<td><span wicket:id="label"></span></td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div class="section">
+	<h2>5.6.2 Changing markup tag attributes</h2>
+
+	<p>This section shows examples of modifying markup attributes from
+	your Java code.</p>
+	<div wicket:id="examples-5.6.2">
+	<table>
+		<tr>
+			<th>Example</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<td><pre>add(new Label("message", "Hello, World!") {
+    @Override
+    protected void onComponentTag(ComponentTag tag) {
+        super.onComponentTag(tag);
+        tag.put("style", "color:red");
+    }
+});</pre></td>
+			<td><span wicket:id="message1">text goes here</span></td>
+		</tr>
+		<tr>
+			<td><pre>add(new Label("message", "Hello, World!").add(
+        new SimpleAttributeModifier("style", "color:red"))); 
+        </pre></td>
+			<td><span wicket:id="message2">text goes here</span></td>
+		</tr>
+		<tr>
+			<td><pre>Link link = new Link("link") {
+  public void onClick() {
+    System.out.println("Clicked!");
+  }
+};
+example4.add(link);
+link.add(new SimpleAttributeModifier("onclick",
+    "return confirm('Are you sure?');"));</pre></td>
+			<td><a href="#" wicket:id="link">Click me!</a></td>
+		</tr>
+	</table>
+	</div>
+</div>
+<div class="section">
+	<h2>5.6.3 Removing excess markup</h2>
+
+	<p>This section shows examples of removing excess markup tags.</p>
+	<div wicket:id="examples-5.6.3">
+	<table>
+		<tr>
+			<th>Example</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<td><pre>&lt;h1 wicket:id="message"&gt;text goes here&lt;/h1&gt;
+add(new Label("message", "Hello, World!").setRenderBodyOnly(true));</pre></td>
+			<td>
+			<h1 wicket:id="message"></h1>
+			</td>
+		</tr>
+	</table>
+	</div>
+</div>
+</wicket:extend>
+</body>
+</html>

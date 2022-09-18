@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+<wicket:extend>
+<h2>14.3 Configuring your application for production</h2>
+<div class="section">
+<h3>14.3.1 Switch to deployment mode for optimal performance</h3>
+<p>The following examples allow you to switch between the various
+settings of Wicket. The application is currently running in <em><span
+	wicket:id="application.configurationType"></span> mode</em>. Please note
+that this application may have modified the defaults provided by Wicket.</p>
+<div class="example"><label>Modification watcher <select
+	wicket:id="application.resourceSettings.resourcePollFrequency"></select></label>
+</div>
+<div class="example"><label><input type="checkbox"
+	wicket:id="application.debugSettings.componentUseCheck" /> Component
+use check</label></div>
+<div class="example"><label><input type="checkbox"
+	wicket:id="application.markupSettings.stripWicketTags" /> Strip wicket
+tags</label></div>
+<div class="example"><label>Show <select
+	wicket:id="application.exceptionSettings.unexpectedExceptionDisplay"></select>
+when an unexpected exception occurs</label> (trigger an <a href="#"
+	wicket:id="exception">exception</a>)</div>
+<div class="example"><label><input type="checkbox"
+	wicket:id="application.debugSettings.ajaxDebugModeEnabled" /> Ajax
+debugger</label> (an <a href="#" wicket:id="ajax">Ajax link</a> to show the
+debugger)</div>
+<div class="example"><label><input type="checkbox"
+	wicket:id="application.resourceSettings.stripJavascriptCommentsAndWhitespace" />
+Strip Javascript comments and whitespace</label></div>
+</div>
+<div class="section">
+<h3>14.3.2 Provide meaningful error pages to your visitors</h3>
+<p></p>
+<div class="example"><label><input type="checkbox"
+	wicket:id="application.cheesrRequestCycle" /> Use CheesrRequestCycle
+to show custom error page for the OutOfCheeseException</label></div>
+<div class="example">
+<table>
+	<tr>
+		<th>throw</th>
+		<th>expected result</th>
+	</tr>
+	<tr>
+		<td><a href="#" wicket:id="outofcheese">OutOfCheeseException</a>
+		</td>
+		<td wicket:id="expected1"></td>
+	</tr>
+	<tr>
+		<td><a href="#" wicket:id="runtime">RuntimeException</a></td>
+		<td wicket:id="expected2"></td>
+	</tr>
+</table>
+</div>
+</div>
+</wicket:extend>
+</body>
+</html>
+

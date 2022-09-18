@@ -1,0 +1,11 @@
+<wicket:panel>
+ <wicket:enclosure child="signout">
+  <wicket:message key="signed_in_as">Signed in as</wicket:message>
+  <i><span wicket:id="fullname">[name]</span></i>
+  &nbsp;&nbsp;<select wicket:id="localeSelect" />
+  &nbsp;&nbsp;<a wicket:id="signout">
+    <wicket:message key="signout">signout</wicket:message>
+  </a>
+ </wicket:enclosure>
+ <a wicket:id="signin">sign in</a>
+</wicket:panel>

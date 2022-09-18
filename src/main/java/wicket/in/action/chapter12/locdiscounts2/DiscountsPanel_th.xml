@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="name">ชื่อ</entry>
+	<entry key="age">อายุ</entry>
+	<entry key="discount">ส่วนลด</entry>
+	<entry key="description">รายละเอียด</entry>
+	<entry key="remove">ลบ</entry>
+	<entry key="display">แสดง</entry>
+	<entry key="edit">แก้ไข</entry>
+	<entry key="new">ใหม่</entry>
+	<entry key="save">บันทึก</entry>
+	<entry key="discounts.title">ลดราคาพิเศษ</entry>
+	<entry key="export.csv">ส่งออกไป csv</entry>
+	<entry key="import">นำเข้า</entry>
+</properties>

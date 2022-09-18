@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="signed_in_as">เข้าสู่ระบบ</entry>
+	<entry key="signout">ออกจากระบบ</entry>
+</properties>

@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Labels page</title>
+</head>
+<body>
+<wicket:extend>
+	<h2>5.2 Displaying text with label components</h2>
+	<p>These examples show how to render text with label components.</p>
+	<div class="section">
+		<h3>5.2.1 Using the Label component to render text</h3>
+		<div class="example">
+			<table>
+				<colgroup><col style="width:60%" /><col style="width:40%" /></colgroup>
+				<thead><tr><th>Code</th><th>Result</th></tr></thead>
+				<tr><td>add(new Label("message", "Hello, World!"));</td><td><span wicket:id="message">text goes here</span></td></tr>
+				<tr><td>add(new Label("label1", "Hello, World!"));</td><td><span wicket:id="label1">Will be replaced</span></td></tr>
+				<tr><td>add(new Label("label2", new PropertyModel(person, "name")));</td><td wicket:id="label2">[name]</td></tr>
+				<tr><td>add(new Label("label3", "Wicket in Action"));</td><td><h1 wicket:id="label3">title goes here</h1></td></tr>
+				<tr><td>add(new Label("name"));</td><td>Name: <span wicket:id="name"></span></td></tr>
+				<tr><td>add(new Label("label4", new ResourceModel("key", "default value")));</td><td><div wicket:id="label4"></div></td></tr>
+			</table>
+		</div>
+	</div>
+	<div class="section">
+		<h3>5.2.2 Displaying multiple lines using a MultiLineLabel</h3>
+		<p>This example demonstrates how the <code>MultiLineLabel</code> honors line breaks and the common <code>Label</code> doesn't.</p>
+		<div class="example">
+			<table>
+				<colgroup><col style="width:40%" /><col style="width:60%" /></colgroup>
+				<thead><tr><th>Code</th><th>Result</th></tr></thead>
+				<tr><td>Label</td><td><span wicket:id="message1"></span></td></tr>
+				<tr><td>MultiLineLabel</td><td><span wicket:id="message2"></span></td></tr>
+			</table>
+		</div>
+	</div>
+	<div class="section">
+		<h3>5.2.3 Displaying formatted text using labels</h3>
+		<div class="example">
+			<table>
+				<colgroup><col style="width:40%" /><col style="width:60%" /></colgroup>
+				<thead><tr><th>Code</th><th>Result</th></tr></thead>
+				<tr><td>Escaped:</td><td wicket:id="message3"></td></tr>
+				<tr><td>Not escaped:</td><td wicket:id="message4"></td></tr>
+				<tr><td>Escaped:</td><td wicket:id="message5"></td></tr>
+				<tr><td>Not escaped:</td><td wicket:id="message6"></td></tr>
+			</table>
+		</div>
+	</div>
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<assembly>
+	<id>binary</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<directory>.</directory>
+			<outputDirectory/>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<excludes>
+				<exclude>**/target/**</exclude>
+				<exclude>.classpath</exclude>
+				<exclude>.project</exclude>
+				<exclude>.settings/**</exclude>
+			</excludes>
+			<includes>
+				<include>*.txt</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>target</directory>
+			<outputDirectory/>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<includes>
+				<include>*.war</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>

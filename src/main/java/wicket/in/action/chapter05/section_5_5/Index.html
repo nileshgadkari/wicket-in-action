@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>5.5 Using Repeaters to repeat markup and components</title>
+<wicket:head>
+    <style type="text/css">
+        ul.rvmenu {
+            padding-bottom : 10px;
+        }
+        .rvmenu li {
+            display:inline;
+            float:left;
+            padding:0 10px;
+            background-color : #00B;
+            color : #fff;
+            border-right : 1px solid #fff;
+        }
+        .rvmenu a {
+            color : #fff;
+            text-decoration : none;
+            font-family : helvetica;
+            font-weight : bold;
+            font-size : 16px;
+        }
+        h2 { clear:both;}
+    </style>
+</wicket:head>
+</head>
+<body>
+<wicket:extend>
+<h2>5.5 Using Repeaters to repeat markup and components</h2>
+<p>This page shows the examples for the repeaters section of chapter 5.</p>
+	<div class="section">
+		<h3>5.5.1 Using the RepeatingView to repeat markup and components</h3>
+		<ul>
+		    <li wicket:id="rv1"></li>
+		</ul>
+		<h4>RepeatingView with different components</h4>
+		<ul>
+		    <li wicket:id="rv2">bare text (second item can be clicked)</li>
+		</ul>
+		
+		<h4>Menu with RepeatingView</h4>
+		<ul class="rvmenu">
+		    <li wicket:id="menu">
+		        <a href="" wicket:id="link">
+		            <span wicket:id="caption"></span>
+		        </a>
+		    </li>
+		</ul>
+	</div>
+	<div class="section">
+		
+		<h3>5.5.2 Using a ListView to repeat markup and components</h3>
+		<ul>
+		    <li wicket:id="lv1"><span wicket:id="value"></span></li>
+		</ul>
+		
+		<h4>Menu with ListView</h4>
+		<ul class="rvmenu">
+		    <li wicket:id="lv2">
+		        <a href="" wicket:id="link">
+		            <span wicket:id="caption"></span>
+		        </a>
+		    </li>
+		</ul>
+		<br />
+		<a href="#" wicket:id="add">add</a> <a href="#" wicket:id="remove">remove</a>
+	</div>
+</wicket:extend>
+</body>
+</html>

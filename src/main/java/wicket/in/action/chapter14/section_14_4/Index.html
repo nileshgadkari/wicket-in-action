@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+<wicket:extend>
+<h2>14.4 Knowing what is happening in your application</h2>
+<div class="section">
+<h3>14.4.1 Log requests with the RequestLogger</h3>
+<p></p>
+<div class="example"></div>
+	<label><input type="checkbox" wicket:id="application.requestLoggerSettings.requestLoggerEnabled" /> Requestlogger enabled</label>
+	<label>Number of requests to track: <input type="text" wicket:id="application.requestLoggerSettings.requestsWindowSize" /></label>
+	<h4>Active sessions</h4>
+	<p>This list shows the number of active sessions that were recorded with the request logger.</p>
+	<table>
+	<tr>
+		<th style="text-align:left;">Start time</th>
+		<th style="text-align:left;">Session id</th>
+		<th style="text-align:left;">Session info</th>
+		<th style="text-align:left;">Session size</th>
+		<th style="text-align:left;">Last active</th>
+		<th style="text-align:left;"># requests</th>
+		<th style="text-align:left;">Server time</th>
+	</tr>
+	<tr wicket:id="sessions">
+		<td wicket:id="startDate"></td>
+		<td wicket:id="sessionId"></td>
+		<td wicket:id="sessionInfo"></td>
+		<td style="text-align:right;" wicket:id="sessionSize"></td>
+		<td wicket:id="lastActive"></td>
+		<td style="text-align:right;" wicket:id="numberOfRequests"></td>
+		<td style="text-align:right;"><span wicket:id="totalTimeTaken"></span>ms</td>
+	</tr>
+	</table>
+	
+	<h4>Recorded requests</h4>
+	<p>This list shows the last <span wicket:id="reqsWindow"></span> requests that were recorded with the request logger.</p>
+	<table>
+	<tr>
+		<th style="text-align:left;">Start time</th>
+		<th style="text-align:left;">Session id</th>
+		<th style="text-align:left;">Session info</th>
+		<th style="text-align:left;">Session size</th>
+		<th style="text-align:left;">Duration</th>
+		<th style="text-align:left;">Active requests</th>
+	</tr>
+	<tr wicket:id="requests">
+		<td wicket:id="startDate"></td>
+		<td wicket:id="sessionId"></td>
+		<td wicket:id="sessionInfo"></td>
+		<td style="text-align:right;" wicket:id="sessionSize"></td>
+		<td style="text-align:right;"><span wicket:id="timeTaken"></span>ms</td>
+		<td style="text-align:right;" wicket:id="activeRequest"></td>
+	</tr>
+	</table>
+</div>
+<div class="section">
+<h3>14.4.2 Monitor request times</h3>
+<p></p>
+<div class="example"></div>
+</div>
+<div class="section">
+<h3>14.4.3 Use JMX to uncover the hood while driving</h3>
+<p></p>
+<div class="example"></div>
+</div>
+</wicket:extend>
+</body>
+</html>
+

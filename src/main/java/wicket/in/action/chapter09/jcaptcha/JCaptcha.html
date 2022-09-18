@@ -1,0 +1,16 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body>
+<wicket:extend>
+  <form wicket:id="form">
+    <img wicket:id="captchaImage" /> <br />
+    Please replicate the text you see above <br />
+    <input wicket:id="response" type="text" />
+    <input type="submit" value="submit" />
+    <span wicket:id="feedback">[feedback is rendered here]</span>
+  </form>
+</wicket:extend>
+</body>
+</html>

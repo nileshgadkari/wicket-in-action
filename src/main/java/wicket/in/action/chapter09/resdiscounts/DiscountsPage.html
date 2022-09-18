@@ -1,0 +1,41 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/style.css"/>
+</head>
+<body>
+<wicket:extend>
+	<h2>9.1 Using packaged resources</h2>
+  	<p>This example shows how to use packaged resources.</p>
+  	<div class="example">
+		<table>
+		  <thead>
+		    <tr>
+		      <th>name</th>
+		      <th>description</th>
+		      <th>from</th>
+		      <th>until</th>
+		      <th>remove</th>
+		    </tr>
+		  </thead>
+		    <tbody>
+		      <tr wicket:id="list">
+		        <td><span wicket:id="cheese.name">name</span></td>
+		        <td><input type="text" wicket:id="discount" size="6" /></td>
+		        <td><input type="text" wicket:id="description" /></td>
+		        <td><span type="text" wicket:id="from" /></td>
+		        <td><span type="text" wicket:id="until" /></td>
+		        <td><a href="#" wicket:id="remove"><img wicket:id="icon" /></a></td>
+		      </tr>
+		    </tbody>
+		</table>
+  	</div>
+  	<h3>9.1.1 Including packaged resources using auto-linking</h3>
+  	<p>This example shows how to use auto-linking with <code>&lt;wicket:link&gt;</code>.</p>
+  	<pre>&lt;wicket:link&gt;
+    &lt;a href="#" wicket:id="remove"&gt;&lt;img src="remove_icon.gif" /&gt;&lt;/a&gt;
+&lt;/wicket:link&gt;</pre>
+<p>becomes:</p>
+<blockquote><wicket:link><a href="#"><img src="remove_icon.gif" /></a></wicket:link></blockquote>
+</wicket:extend>
+</body>
+</html>

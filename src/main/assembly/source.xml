@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<assembly>
+	<id>source</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<scope>compile</scope>
+			<useProjectArtifact>false</useProjectArtifact>
+		</dependencySet>
+	</dependencySets>
+	<files>
+		<file>
+			<source>src/main/assembly/build.xml</source>
+		</file>
+	</files>
+	<fileSets>
+		<fileSet>
+			<directory>.</directory>
+			<outputDirectory/>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<excludes>
+				<exclude>**/target/**</exclude>
+				<exclude>.classpath</exclude>
+				<exclude>.project</exclude>
+				<exclude>.settings/**</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+</assembly>

@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>5.3 Navigating using links</title>
+</head>
+<body>
+<wicket:extend>
+	<h2>5.3 Navigating using links</h2>
+	<p>These examples show how to navigate using components.</p>
+	<div class="section">
+		<h3>5.3.1 Linking to documents using static links</h3>
+		<p>This example shows how to link with static links inside the markup.</p>
+		<div class="example">
+			<p>The markup in the following example</p>
+			<pre>&lt;!-- markup --&gt;
+&lt;a href="http://manning.com/dashorst"&gt;Wicket in Action&lt;/a&gt;</pre>
+			<p>becomes:</p>
+			<blockquote><a href="http://manning.com/dashorst">Wicket in Action</a></blockquote>
+		</div>
+	</div>
+	<div class="section">
+		<h3>5.3.2 Using ExternalLink to render links programmatically</h3>
+		<p>This example shows how to an external link.</p>
+		<div class="example">
+			<p>The following markup and Java code</p>
+			<pre>&lt;!-- markup --&gt;
+&lt;a href="#" wicket:id="recipe"&gt;foobar&lt;/a&gt;
+
+/* Java code */
+add(new ExternalLink("recipe", recipe.getUrl(), recipe.getName()));
+</pre>
+			<p>Becomes:</p>
+			<blockquote><a href="#" wicket:id="recipe">foobar</a></blockquote>
+		</div>
+	</div>
+	<div class="section">
+		<h3>5.3.3 Linking to Wicket pages with BookmarkablePageLinks</h3>
+		<p>This example shows how to a bookmarkable page link.</p>
+		<div class="example">
+			<p>The following markup and Java code:</p>
+			<pre>&lt;!-- markup --&gt;
+&lt;a href="#" wicket:id="book"&gt;Book&lt;/a&gt;
+
+/* Java code */
+add(new BookmarkablePageLink("book", Book.class));
+</pre>
+<p>becomes:</p>
+<blockquote><a href="#" wicket:id="book">Book</a></blockquote>
+		</div>
+		<div class="example">
+			<p>The following example shows how to a bookmarkable page link together with PageParameters.</p>
+			<pre>&lt;!-- markup --&gt;
+&lt;a href="#" wicket:id="details"&gt;Details&lt;/a&gt;
+
+/* Java code */
+add(new BookmarkablePageLink("details", CheeseDetailsPage.class, 
+                         new PageParameters("name="+cheese.getName()));
+</pre>
+<p>becomes:</p>
+<blockquote><a href="#" wicket:id="details">Details</a></blockquote>
+		</div>
+	</div>
+	<div class="section">
+		<h3>5.3.4 Adding bookmarkable links automatically with wicket:link</h3>
+		<div class="example">
+			<p>The following example shows how to a create a simple menu using &lt;wicket:link&gt;.</p>
+			<pre>&lt;wicket:link&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="Index.html"&gt;This page&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="Page1.html"&gt;Page1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="Page2.html"&gt;Page2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/wicket:link&gt;</pre>
+			<p>Becomes:</p>
+			<blockquote>
+				<wicket:link>
+				<ul>
+					<li><a href="Index.html">This page</a></li>
+					<li><a href="Page1.html">Page1</a></li>
+					<li><a href="Page2.html">Page2</a></li>
+				</ul>
+				</wicket:link>
+			</blockquote>    
+		</div>
+	</div>
+</wicket:extend>
+</body>
+</html>

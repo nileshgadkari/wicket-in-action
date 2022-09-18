@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+<wicket:extend>
+	<h2>5.4 Responding to client actions with a link</h2>
+	<p>These examples show how to links as interactive components.</p>
+	<div class="section">
+		<h3>5.4.1 Using Link to respond to client actions</h3>
+		<p>This example shows how to use a <code>Link</code> as an interactive component.</p>
+		<div class="example">
+			<p>The link in this example navigates to another page in its <code>onClick</code> handler.</p>
+			<pre>&lt;!-- markup --&gt;
+&lt;a href="#" wicket:id="link1"&gt;click me&lt;/a&gt;
+
+/* Java code */
+add(new Link("link1") {
+    @Override
+    public void onClick() {
+        // do something special
+        Page next = new Page1();
+        setResponsePage(next);
+    }
+});
+</pre>
+			<p>becomes:</p>
+			<blockquote><a href="#" wicket:id="link1">click me</a></blockquote>
+		</div>
+	</div>
+	<div class="section">
+		<h3>5.4.2 Using AjaxFallbackLink to respond to client actions</h3>
+		<p>This example shows how to use an Ajax link as an interactive component.</p>
+		<div class="example" wicket:id="example542">
+			<table>
+			<tr style="vertical-align:top"><td>
+			<h4>Available items</h4>
+			<ul>
+				<li wicket:id="items"><span wicket:id="value"></span> <a href="#" wicket:id="add">add</a></li>
+			</ul>
+			</td>
+			<td>
+			<h4>Selected items</h4>
+			<ul>
+				<li wicket:id="selected"><span wicket:id="value"></span> <a href="#" wicket:id="remove">remove</a></li>
+			</ul>
+			</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+</wicket:extend>
+</body>
+</html>
+

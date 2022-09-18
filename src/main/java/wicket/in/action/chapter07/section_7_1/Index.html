@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+<wicket:extend>
+	<h2>7.1 Composing your pages</h2>
+  	<p>The examples in this section all group the following two labels:
+		<pre>    &lt;span wicket:id="dexter">&lt;/span>
+    &lt;span wicket:id="deedee">&lt;/span></pre>
+	The next example shows how they are rendered:</p>
+	<div class="example">
+		<blockquote wicket:id="dexter">[label1]</blockquote>
+		<blockquote wicket:id="deedee">[label2]</blockquote>
+	</div>
+	<div class="section">
+	  	<h3>7.1.1 Grouping components on a page: WebMarkupContainer</h3>
+	  	<p>.</p>
+	  	<div class="example">
+	  		<div wicket:id="group">
+				<blockquote wicket:id="dexter">[label1]</blockquote>
+				<blockquote wicket:id="deedee">[label2]</blockquote>
+	  		</div>
+			<a href="#" wicket:id="link">link</a>
+	  	</div>
+	</div>
+	<div class="section">
+	  	<h3>7.1.2 Using panels to group your components</h3>
+	  	<p>The following example shows a basic panel.</p>
+	  	<div class="example">
+	  		<div wicket:id="example"></div>
+	  	</div>
+	  	<p>The following example shows how to use panels to group your components.</p>
+	  	<div class="example">
+	  		<div wicket:id="group2"></div>
+	  		<a href="#" wicket:id="swap">Swap panel</a>
+	  	</div>
+	</div>
+	<div class="section">
+	  	<h3>7.1.3 Using fragments to group your components</h3>
+	  	<p>The following example shows how to use fragments to group your components.</p>
+	  	<div class="example">
+	  		<div wicket:id="group3"></div>
+	  	</div>
+	</div>
+  
+<wicket:fragment wicket:id="labelsgroup">
+	<blockquote wicket:id="dexter">[label1]</blockquote>
+	<blockquote wicket:id="deedee">[label2]</blockquote>
+</wicket:fragment>
+</wicket:extend>
+</body>
+</html>
+
